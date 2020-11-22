@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+   </head>
+   <body>
+      <div class="nav">
+         <ul id="list-nav">
+            <li><a id="nav_form" >Registration Form</a></li>
+            <li><a id="nav_search" >Search</a></li>
+            <li><a id="nav_graphs" >Graphs</a></li>
+         </ul>
+      </div>
+      <div class="container">
+         <div id="graphContainer"></div>
+         <div id="searchContainer">
+            <h1>Search</h1>
+            <input type="text"/>
+            <ul id="myUL"></ul>
+            <div id="myModal" class="modal">
+               <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div class="modal-data"></div>
+               </div>
+            </div>
+         </div>
+         <form id="registrationForm">
+            <h1>Registration</h1>
+            <div class="row">
+               <div class="col-25">
+                  <label for="name">Name</label>
+               </div>
+               <div class="col-75">
+                  <input type="text" id="name" name="name" placeholder="Your name..">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <label for="age">Age</label>
+               </div>
+               <div class="col-75">
+                  <input type="text" id="age" name="age" placeholder="Your age..">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <label for="dob">D.O.B</label>
+               </div>
+               <div class="col-75">
+                  <input type="date" id="dob" name="dob" placeholder="Your DOB..">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <label for="profession">Profession</label>
+               </div>
+               <div class="col-75">
+                  <select id="profession" name="profession">
+                     <option value="select">Select</option>
+                     <option value="employed">Employed</option>
+                     <option value="Student">Student</option>
+                  </select>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <label for="Locality">Locality</label>
+               </div>
+               <div class="col-75">
+                  <input type="text" id="locality" name="locality" placeholder="Your Locality..">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <label for="guests">No of Guests</label>
+               </div>
+               <div class="col-75">
+                  <select id="guests" name="guests">
+                     <option value="0">0</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                  </select>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <label for="address">Address</label>
+               </div>
+               <div class="col-75">
+                  <textarea id="address" maxlength="50" name="address" placeholder="Address.." style="height:200px"></textarea>
+               </div>
+            </div>
+            <div class="row">
+               <input type="submit" value="Submit" id="submit">
+            </div>
+         </form>
+      </div>
+      <script id="blog" type="template">
+         <h1>Reports</h1>
+         <h3>Age Range</h3>
+         <ul>
+         <li>13-18 = {{no_13_18}}</li>
+         <li>18-25 = {{no_18_25}}</li>
+         <li>25+ = {{no_25}}</li>
+         </ul>  
+         <h3>Type</h3>
+         <ul>
+         <li>Professionals  = {{professional}}</li>
+         <li>Students = {{students}}</li>
+         
+         </ul> 
+      </script>
+      <script type="text/javascript" src='sample_data.js'></script>
+      <script type="text/javascript" src='rsvp.js'></script>
+   </body>
+</html>
